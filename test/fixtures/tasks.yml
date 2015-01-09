@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  description: MyText
+  taskable_type: MyString
+  date: 2015-01-08 22:15:33
+  title: MyString
+  taskable_id: 1
+
+two:
+  description: MyText
+  taskable_type: MyString
+  date: 2015-01-08 22:15:33
+  title: MyString
+  taskable_id: 1

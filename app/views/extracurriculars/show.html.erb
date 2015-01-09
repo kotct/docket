@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @extracurricular.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @extracurricular.description %>
+</p>
+
+<p>
+  <strong>School:</strong>
+  <%= @extracurricular.school_id %>
+</p>
+
+<%= link_to 'Edit', edit_extracurricular_path(@extracurricular) %> |
+<%= link_to 'Back', extracurriculars_path %>
