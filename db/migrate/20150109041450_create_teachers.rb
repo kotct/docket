@@ -9,5 +9,10 @@ class CreateTeachers < ActiveRecord::Migration
 
 			t.timestamps null: false
 		end
+
+		create_table :teachers_classrooms, id: false do |t|
+			t.belongs_to :teacher, index: true
+			t.belongs_to :classroom, index: true
+		end
 	end
 end
