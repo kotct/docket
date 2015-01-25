@@ -16,10 +16,17 @@ ActiveRecord::Schema.define(version: 20150109041933) do
   create_table "classrooms", force: :cascade do |t|
     t.string   "period"
     t.integer  "course_id"
-    t.integer  "teacher_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
+
+  create_table "classrooms_teachers", id: false, force: :cascade do |t|
+    t.integer "teacher_id"
+    t.integer "classroom_id"
+  end
+
+  add_index "classrooms_teachers", ["classroom_id"], name: "index_classrooms_teachers_on_classroom_id"
+  add_index "classrooms_teachers", ["teacher_id"], name: "index_classrooms_teachers_on_teacher_id"
 
   create_table "configurations", force: :cascade do |t|
     t.string   "name"
